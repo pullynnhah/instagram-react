@@ -13,7 +13,7 @@ export default function Stories() {
   ];
 
   return (
-    <div class="stories">
+    <div className="stories">
       {users.map(user => (
         <Story key={user} user={user} />
       ))}

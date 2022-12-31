@@ -129,6 +129,9 @@ nav img {
 .reactions ion-icon {
   font-size: 22px;
 }
+.reactions ion-icon[name="heart"] {
+  color: #f32424;
+}
 
 .reactions ion-icon:last-of-type {
   margin-left: auto;

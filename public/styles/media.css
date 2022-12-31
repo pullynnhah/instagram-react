@@ -23,7 +23,7 @@
 
   ion-icon:hover {
     cursor: pointer;
-    color: #fc86c1;
+    color: #f32424;
   }
 
   nav .border {
@@ -79,6 +79,17 @@
     border: 1px solid #dbdbdb;
     border-radius: 3px;
     margin: 0 auto 60px;
+  }
+
+  .post img,
+  .post video {
+    transition: all 300ms;
+  }
+
+  .post img:hover,
+  .post video:hover {
+    opacity: 0.8;
+    cursor: pointer;
   }
 
   .post video {

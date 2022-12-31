@@ -5,11 +5,14 @@ export default function PostItem({
   setIsLiked,
   likesCount,
   setLikesCount,
+  setId,
 }) {
   function likePost() {
     if (!isLiked) {
       setIsLiked(true);
       setLikesCount(likesCount + 1);
+      setId("white-heart");
+      setTimeout(() => setId("hidden-white-heart"), 500);
     }
   }
 

@@ -17,17 +17,23 @@ export default function Post({
 }) {
   const [likesCount, setLikesCount] = useState(likes);
   const [isLiked, setIsLiked] = useState(false);
+  const [id, setId] = useState("hidden-white-heart");
+  console.log(id);
   return (
     <article className="post">
       <PostHeader user={user} />
-      <PostItem
-        isVideo={isVideo}
-        post={post}
-        isLiked={isLiked}
-        setIsLiked={setIsLiked}
-        likesCount={likesCount}
-        setLikesCount={setLikesCount}
-      />
+      <div className="post-item">
+        <PostItem
+          isVideo={isVideo}
+          post={post}
+          isLiked={isLiked}
+          setIsLiked={setIsLiked}
+          likesCount={likesCount}
+          setLikesCount={setLikesCount}
+          setId={setId}
+        />
+        <ion-icon id={id} name="heart"></ion-icon>
+      </div>
       <PostFooter
         userLikesSrc={userLikesSrc}
         userLikes={userLikes}

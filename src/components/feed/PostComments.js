@@ -1,13 +1,17 @@
 import { useState } from "react";
 
 export default function PostComments({ comments, comment }) {
-  const [comment, setComment] = useState(comment);
-  const [commentInput, setCommentInput] = useState("");
+  const [commentText, setCommentText] = useState(comment);
   const [commentCount, setCommentCount] = useState(comments);
+  const [input, setInput] = useState("");
+
+  const [isLiked, setIsLiked] = useState(false);
 
   function updateComment() {
-    setComment(input);
+    setCommentText(input);
     setCommentCount(commentCount + 1);
+    setInput("");
+    setIsLiked(false);
   }
 
   return (
@@ -16,15 +20,17 @@ export default function PostComments({ comments, comment }) {
         Ver todos os {commentCount.toLocaleString("en-us")} comentários
       </button>
       <div className="old-comment">
-        <p>{comment}</p>
-        <ion-icon name="heart-outline"></ion-icon>
+        <p>{commentText}</p>
+        <ion-icon
+          onClick={() => setIsLiked(!isLiked)}
+          name={isLiked ? "heart" : "heart-outline"}></ion-icon>
       </div>
       <div className="new-comment">
         <ion-icon name="happy-outline"></ion-icon>
         <input
           type="text"
-          onChange={e => setComment(e.target.value)}
-          value={comment}
+          onChange={e => setInput(e.target.value)}
+          value={input}
           placeholder="Adicione um comentário"
         />
         <button onClick={updateComment}>Publicar</button>

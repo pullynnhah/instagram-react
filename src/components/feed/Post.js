@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PostComments from "./PostComments";
 
 import PostFooter from "./PostFooter";
 import PostHeader from "./PostHeader";
@@ -11,6 +12,8 @@ export default function Post({
   post,
   userLikesSrc,
   userLikes,
+  comments,
+  comment,
 }) {
   const [likesCount, setLikesCount] = useState(likes);
   const [isLiked, setIsLiked] = useState(false);
@@ -33,6 +36,7 @@ export default function Post({
         isLiked={isLiked}
         setIsLiked={setIsLiked}
       />
+      <PostComments comments={comments} comment={comment} />
     </article>
   );
 }

@@ -1,4 +1,5 @@
 import Feed from "./feed/Feed";
+import Sidebar from "./sidebar/Sidebar";
 import Stories from "./stories/Stories";
 
 export default function Wrapper() {
@@ -8,7 +9,7 @@ export default function Wrapper() {
         <Stories />
         <Feed />
       </main>
-      <aside></aside>
+      <Sidebar />
     </div>
   );
 }

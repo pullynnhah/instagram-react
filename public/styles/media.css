@@ -147,7 +147,21 @@
     gap: 17px;
   }
 
-  aside p {
+  .me img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .me .edit-user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .edit-user aside p {
     font-weight: 300;
     color: #8e8e8e;
   }

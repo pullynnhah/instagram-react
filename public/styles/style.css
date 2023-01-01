@@ -161,7 +161,7 @@ nav img {
   font-size: 22px;
 }
 
-ion-icon[name="heart"] {
+.post ion-icon[name="heart"] {
   color: #f32424;
 }
 

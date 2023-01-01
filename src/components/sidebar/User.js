@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-export default function User() {
-  const [image, setImage] = useState("./assets/large/catanacomics.png");
-  const [user, setUser] = useState("Catana");
+export default function User({ userImage, username, name }) {
+  const [image, setImage] = useState(userImage);
+  const [user, setUser] = useState(name);
 
   function set(value, callback) {
     if (value) {
@@ -17,7 +17,7 @@ export default function User() {
         alt="cananacomics"
       />
       <div>
-        <strong>catanacomics</strong>
+        <strong>{username}</strong>
         <div className="edit-user">
           <p>{user}</p>
           <ion-icon

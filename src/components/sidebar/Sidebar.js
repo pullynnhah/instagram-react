@@ -5,7 +5,11 @@ import User from "./User";
 export default function Sidebar() {
   return (
     <aside>
-      <User />
+      <User
+        userImage="./assets/large/catanacomics.png"
+        username="catanacomics"
+        name="Catana"
+      />
       <Suggestions />
       <SidebarFooter />
     </aside>

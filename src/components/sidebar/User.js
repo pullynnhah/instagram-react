@@ -1,9 +1,4 @@
-import { useState } from "react";
-
-export default function User({ userImage, username, name }) {
-  const [image, setImage] = useState(userImage);
-  const [user, setUser] = useState(name);
-
+export default function User({ image, setImage, user, setUser, username }) {
   function set(value, callback) {
     if (value) {
       callback(value);

@@ -1,14 +1,21 @@
+import { useState } from "react";
+
 import SidebarFooter from "./SidebarFooter";
 import Suggestions from "./Suggestions";
 import User from "./User";
 
 export default function Sidebar() {
+  const [image, setImage] = useState("./assets/large/catanacomics.png");
+  const [user, setUser] = useState("Catana");
+
   return (
     <aside>
       <User
-        userImage="./assets/large/catanacomics.png"
         username="catanacomics"
-        name="Catana"
+        image={image}
+        setImage={setImage}
+        user={user}
+        setUser={setUser}
       />
       <Suggestions />
       <SidebarFooter />

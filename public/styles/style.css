@@ -123,18 +123,18 @@ nav img {
   position: relative;
 }
 
-#white-heart {
+.post .post-item.white-heart ion-icon {
   position: absolute;
   top: calc(50% - 90px);
   left: calc(50% - 90px);
   font-size: 150px;
   color: #fff;
   pointer-events: none;
-  animation: scale-up-center 0.3s;
+  animation: scale-up-center 300ms ease-in-out;
 }
 
-#hidden-white-heart {
-  visibility: hidden;
+.post .post-item.hidden-white-heart ion-icon {
+  display: none !important;
 }
 
 @keyframes scale-up-center {

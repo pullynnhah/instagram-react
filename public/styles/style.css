@@ -124,6 +124,7 @@ nav img {
 }
 
 .post .post-item.white-heart ion-icon {
+  display: block;
   position: absolute;
   top: calc(50% - 90px);
   left: calc(50% - 90px);

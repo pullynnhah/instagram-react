@@ -31,6 +31,7 @@ export default function Post({
           setIsLiked={setIsLiked}
           likesCount={likesCount}
           setLikesCount={setLikesCount}
+          setCls={setCls}
         />
         <ion-icon name="heart"></ion-icon>
       </div>

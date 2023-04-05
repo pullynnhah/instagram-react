@@ -150,7 +150,7 @@ export default function Content() {
             <ion-icon className="right-icon" name="ellipsis-horizontal"></ion-icon>
           </div>
 
-          <video controls autoplay muted>
+          <video controls autoPlay muted>
             <source src="./assets/posts/video.mp4" type="video/mp4" />
             <source src="./assets/posts/video.ogg" type="video/ogg" />
           </video>

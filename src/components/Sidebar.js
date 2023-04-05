@@ -1,65 +1,65 @@
 export default function Sidebar() {
   return (
     <aside>
-      <div class="user">
+      <div className="user">
         <img src="./assets/large/catanacomics.png" alt="catanacomics" />
         <div>
-          <p class="username">catanacomics</p>
-          <p class="name">Catana</p>
+          <p className="username">catanacomics</p>
+          <p className="name">Catana</p>
         </div>
       </div>
-      <div class="suggestions">
-        <div class="suggestions-header">
+      <div className="suggestions">
+        <div className="suggestions-header">
           <p>Sugestões para você</p>
           <button>Ver tudo</button>
         </div>
 
-        <div class="suggestion">
+        <div className="suggestion">
           <img src="./assets/small/badvibesmemes.png" alt="bad.vibes.memes" />
           <div>
-            <p class="username">bad.vibes.memes</p>
+            <p className="username">bad.vibes.memes</p>
             <small>Segue você</small>
           </div>
           <button>Seguir</button>
         </div>
 
-        <div class="suggestion">
+        <div className="suggestion">
           <img src="./assets/small/chibirdart.png" alt="chibirdart" />
           <div>
-            <p class="username">chibirdart</p>
+            <p className="username">chibirdart</p>
             <small>Segue você</small>
           </div>
           <button>Seguir</button>
         </div>
 
-        <div class="suggestion">
+        <div className="suggestion">
           <img src="./assets/small/razoesparaacreditar.png" alt="razoesparaacreditar" />
           <div>
-            <p class="username">razoesparaacreditar</p>
+            <p className="username">razoesparaacreditar</p>
             <small>Novo no Instagram</small>
           </div>
           <button>Seguir</button>
         </div>
 
-        <div class="suggestion">
+        <div className="suggestion">
           <img src="./assets/small/adorableanimals.png" alt="adorable_animals" />
           <div>
-            <p class="username">adorable_animals</p>
+            <p className="username">adorable_animals</p>
             <small>Segue você</small>
           </div>
           <button>Seguir</button>
         </div>
 
-        <div class="suggestion">
+        <div className="suggestion">
           <img src="./assets/small/chibirdart.png" alt="chibirdart" />
           <div>
-            <p class="username">chibirdart</p>
+            <p className="username">chibirdart</p>
             <small>Segue você</small>
           </div>
           <button>Seguir</button>
         </div>
       </div>
-      <div class="disclamer">
+      <div className="disclamer">
         <p>
           Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas
           mais relevantes • Hashtags • Idioma

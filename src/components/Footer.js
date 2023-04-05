@@ -1,11 +1,11 @@
 export default function Footer() {
+  const icons = ["home", "search-outline", "add-circle-outline", "heart-outline", "person-outline"];
+
   return (
     <footer>
-      <ion-icon name="home"></ion-icon>
-      <ion-icon name="search-outline"></ion-icon>
-      <ion-icon name="add-circle-outline"></ion-icon>
-      <ion-icon name="heart-outline"></ion-icon>
-      <ion-icon name="person-outline"></ion-icon>
+      {icons.map(icon => (
+        <ion-icon key={icon} name={icon}></ion-icon>
+      ))}
     </footer>
   );
 }

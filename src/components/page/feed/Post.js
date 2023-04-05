@@ -1,3 +1,5 @@
+import PostHeader from "./post/PostHeader";
+
 export default function Post({
   creator,
   isVideo,
@@ -11,12 +13,7 @@ export default function Post({
 }) {
   return (
     <article class="post">
-      <div class="post-header">
-        <img src={`./assets/small/${creator}.png`} alt={creator} />
-        <h2>{creator}</h2>
-        <ion-icon class="right-icon" name="ellipsis-horizontal"></ion-icon>
-      </div>
-
+      <PostHeader creator={creator} />
       {isVideo ? (
         <video controls autoPlay muted>
           <source src={`./assets/posts/${post}.mp4`} type="video/mp4" />

@@ -1,4 +1,5 @@
 import Comments from "./post-footer/Comments";
+import LikesInfo from "./post-footer/LikesInfo";
 import Reactions from "./post-footer/Reactions";
 
 export default function PostFooter({
@@ -13,15 +14,7 @@ export default function PostFooter({
   return (
     <div className="post-footer">
       <Reactions isLiked={isLiked} updateIsLiked={updateIsLiked} />
-
-      <div className="likes-info">
-        <img src={`./assets/micro/${likesImage}.png`} alt={likesUser} />
-        <p>
-          Curtido por <strong>{likesUser}</strong> e{" "}
-          <strong>outras {likesCounter.toLocaleString("pt-br")} pessoas</strong>
-        </p>
-      </div>
-
+      <LikesInfo likesImage={likesImage} likesUser={likesUser} likesCount={likesCounter} />
       <Comments commentsCount={commentsCount} lastComment={lastComment} />
     </div>
   );

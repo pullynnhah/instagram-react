@@ -1,22 +1,21 @@
 import { useState } from "react";
 
-export default function User() {
-  const defaults = { name: "Catana", image: "./assets/large/catanacomics.png" };
-  const [name, setName] = useState(defaults.name);
-  const [image, setImage] = useState(defaults.image);
+export default function User({ name, username, image }) {
+  const [name, setName] = useState(name);
+  const [image, setImage] = useState(image);
   return (
     <div className="user">
       <img
-        onClick={() => setImage(prompt("URL da imagem?") || defaults.image)}
+        onClick={() => setImage(prompt("URL da imagem?") || image)}
         src={image}
         alt="catanacomics"
       />
       <div>
-        <p className="username">catanacomics</p>
+        <p className="username">{username}</p>
         <div className="name-box">
           <p className="name">{name}</p>
           <ion-icon
-            onClick={() => setName(prompt("Qual o seu nome?") || defaults.name)}
+            onClick={() => setName(prompt("Qual o seu nome?") || name)}
             name="pencil"></ion-icon>
         </div>
       </div>

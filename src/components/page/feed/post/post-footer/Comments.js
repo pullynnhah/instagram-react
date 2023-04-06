@@ -13,19 +13,19 @@ export default function Comments({ commentsCount, lastComment }) {
     setIsLiked(false);
   }
   return (
-    <div class="comments">
-      <button class="all-comments">
+    <div className="comments">
+      <button className="all-comments">
         Ver todos os {counter.toLocaleString("pt-br")} comentários
       </button>
 
-      <div class="comment">
+      <div className="comment">
         <p>{comment}</p>
         <ion-icon
           onClick={() => setIsLiked(!isLiked)}
           name={isLiked ? "heart" : "heart-outline"}></ion-icon>
       </div>
 
-      <div class="new-comment">
+      <div className="new-comment">
         <ion-icon name="happy-outline"></ion-icon>
         <input
           value={input}

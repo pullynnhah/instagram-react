@@ -13,7 +13,7 @@ export default function Post({
   lastComment
 }) {
   return (
-    <article class="post">
+    <article className="post">
       <PostHeader creator={creator} />
       {isVideo ? (
         <video controls autoPlay muted>

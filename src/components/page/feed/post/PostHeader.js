@@ -1,9 +1,9 @@
 export default function PostHeader({ creator }) {
   return (
-    <div class="post-header">
+    <div className="post-header">
       <img src={`./assets/small/${creator}.png`} alt={creator} />
       <h2>{creator}</h2>
-      <ion-icon class="right-icon" name="ellipsis-horizontal"></ion-icon>
+      <ion-icon className="right-icon" name="ellipsis-horizontal"></ion-icon>
     </div>
   );
 }

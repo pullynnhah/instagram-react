@@ -1,5 +1,7 @@
+import { useState } from "react";
 import PostFooter from "./post/PostFooter";
 import PostHeader from "./post/PostHeader";
+import PostItem from "./post/PostItem";
 
 export default function Post({
   creator,
@@ -12,21 +14,38 @@ export default function Post({
   commentsCount,
   lastComment
 }) {
+  const [isLiked, setIsLiked] = useState(false);
+  const [likesCounter, setLikesCounter] = useState(likesCount);
+  const [cls, setCls] = useState("post-item hidden");
+
+  function updateIsLiked() {
+    if (isLiked) {
+      setLikesCounter(likesCounter - 1);
+    } else {
+      setLikesCounter(likesCounter + 1);
+    }
+    setIsLiked(!isLiked);
+  }
+
+  function updateCls() {
+    if (!isLiked) {
+      setIsLiked(true);
+      setLikesCounter(likesCounter + 1);
+    }
+    setCls("post-item");
+    setTimeout(() => setCls("post-item hidden"), 500);
+  }
+
   return (
     <article className="post">
       <PostHeader creator={creator} />
-      {isVideo ? (
-        <video controls autoPlay muted>
-          <source src={`./assets/posts/${post}.mp4`} type="video/mp4" />
-          <source src={`./assets/posts/${post}.ogg`} type="video/ogg" />
-        </video>
-      ) : (
-        <img src={`./assets/posts/${post}.png`} alt={postAlt} />
-      )}
+      <PostItem isVideo={isVideo} post={post} postAlt={postAlt} cls={cls} updateCls={updateCls} />
       <PostFooter
+        isLiked={isLiked}
+        updateIsLiked={updateIsLiked}
         likesImage={likesImage}
         likesUser={likesUser}
-        likesCount={likesCount}
+        likesCounter={likesCounter}
         commentsCount={commentsCount}
         lastComment={lastComment}
       />

@@ -21,7 +21,7 @@ export default function Comments({ commentsCount, lastComment }) {
       <div class="comment">
         <p>{comment}</p>
         <ion-icon
-          onClick={() => setIsLiked(true)}
+          onClick={() => setIsLiked(!isLiked)}
           name={isLiked ? "heart" : "heart-outline"}></ion-icon>
       </div>
 

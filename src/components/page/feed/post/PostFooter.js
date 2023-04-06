@@ -1,4 +1,5 @@
 import Comments from "./post-footer/Comments";
+import Reactions from "./post-footer/Reactions";
 
 export default function PostFooter({
   likesImage,
@@ -8,15 +9,10 @@ export default function PostFooter({
   lastComment
 }) {
   return (
-    <div class="post-footer">
-      <div class="reactions">
-        <ion-icon name="heart-outline"></ion-icon>
-        <ion-icon name="chatbubble-outline"></ion-icon>
-        <ion-icon name="paper-plane-outline"></ion-icon>
-        <ion-icon class="right-icon" name="bookmark-outline"></ion-icon>
-      </div>
+    <div className="post-footer">
+      <Reactions />
 
-      <div class="likes-info">
+      <div className="likes-info">
         <img src={`./assets/micro/${likesImage}.png`} alt={likesUser} />
         <p>
           Curtido por <strong>{likesUser}</strong> e{" "}

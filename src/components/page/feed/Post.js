@@ -1,3 +1,4 @@
+import PostFooter from "./post/PostFooter";
 import PostHeader from "./post/PostHeader";
 
 export default function Post({
@@ -22,40 +23,13 @@ export default function Post({
       ) : (
         <img src={`./assets/posts/${post}.png`} alt={postAlt} />
       )}
-
-      <div class="post-footer">
-        <div class="reactions">
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-icon name="chatbubble-outline"></ion-icon>
-          <ion-icon name="paper-plane-outline"></ion-icon>
-          <ion-icon class="right-icon" name="bookmark-outline"></ion-icon>
-        </div>
-
-        <div class="likes-info">
-          <img src={`./assets/micro/${likesImage}.png`} alt={likesUser} />
-          <p>
-            Curtido por <strong>{likesUser}</strong> e{" "}
-            <strong>outras {likesCount.toLocaleString("pt-br")} pessoas</strong>
-          </p>
-        </div>
-
-        <div class="comments">
-          <button class="all-comments">
-            Ver todos os {commentsCount.toLocaleString("pt-br")} comentários
-          </button>
-
-          <div class="comment">
-            <p>{lastComment}</p>
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-
-          <div class="new-comment">
-            <ion-icon name="happy-outline"></ion-icon>
-            <input type="text" placeholder="Adicione um comentário" />
-            <button>Publicar</button>
-          </div>
-        </div>
-      </div>
+      <PostFooter
+        likesImage={likesImage}
+        likesUser={likesUser}
+        likesCount={likesCount}
+        commentsCount={commentsCount}
+        lastComment={lastComment}
+      />
     </article>
   );
 }

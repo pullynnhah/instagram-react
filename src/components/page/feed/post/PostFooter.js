@@ -14,7 +14,7 @@ export default function PostFooter({
   return (
     <div className="post-footer">
       <Reactions isLiked={isLiked} updateIsLiked={updateIsLiked} />
-      <LikesInfo likesImage={likesImage} likesUser={likesUser} likesCount={likesCounter} />
+      <LikesInfo likesImage={likesImage} likesUser={likesUser} likesCounter={likesCounter} />
       <Comments commentsCount={commentsCount} lastComment={lastComment} />
     </div>
   );

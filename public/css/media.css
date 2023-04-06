@@ -129,6 +129,17 @@
     gap: 17px;
   }
 
+  .user img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+  }
+
+  .name-box {
+    display: flex;
+    gap: 5px;
+  }
+
   aside p,
   .suggestions small {
     font-size: 14px;

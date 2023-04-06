@@ -1,13 +1,10 @@
+import Disclamer from "./sidebar/Disclamer";
+import User from "./sidebar/User";
+
 export default function Sidebar() {
   return (
     <aside>
-      <div className="user">
-        <img src="./assets/large/catanacomics.png" alt="catanacomics" />
-        <div>
-          <p className="username">catanacomics</p>
-          <p className="name">Catana</p>
-        </div>
-      </div>
+      <User />
       <div className="suggestions">
         <div className="suggestions-header">
           <p>Sugestões para você</p>
@@ -59,14 +56,7 @@ export default function Sidebar() {
           <button>Seguir</button>
         </div>
       </div>
-      <div className="disclamer">
-        <p>
-          Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas
-          mais relevantes • Hashtags • Idioma
-        </p>
-
-        <p>© 2021 INSTAGRAM DO FACEBOOK</p>
-      </div>
+      <Disclamer />
     </aside>
   );
 }

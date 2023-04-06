@@ -5,7 +5,8 @@ export default function Suggestions() {
     { image: "badvibesmemes", name: "bad.vibes.memes", text: "Segue você" },
     { image: "chibirdart", name: "chibirdart", text: "Segue você" },
     { image: "razoesparaacreditar", name: "razoesparaacreditar", text: "Novo no Instagram" },
-    { image: "adorableanimals", name: "adorable_animals", text: "Segue você" }
+    { image: "adorableanimals", name: "adorable_animals", text: "Segue você" },
+    { image: "smallcutecats", name: "smallcutecats", text: "Segue você" }
   ];
   return (
     <div className="suggestions">
